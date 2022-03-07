@@ -2,12 +2,12 @@ package Cuahang;
 
 import java.util.Scanner;
 
-public class hanghoa {
+public class commodity {
 
     static void menu() {
         System.out.println("MENU");
         System.out.println(" 1 : add proproduct");
-        System.out.println(" 2 : remoe product");
+        System.out.println(" 2 : remove product");
         System.out.println(" 3 : Iterrate product");
         System.out.println(" 4 : search product");
         System.out.println(" 5 : exit");
