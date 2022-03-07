@@ -40,7 +40,7 @@ public class Commoditycommodity {
                     break;
                 }
                 case 4: {
-                    System.out.println("nhap khoan gia ma ban muo tim");
+                    System.out.println("nhap khoang gia ma ban muon tim");
                     double min = input.nextDouble();
                     double max = input.nextDouble();
                     newshop.searchProduct(min, max);
@@ -51,7 +51,7 @@ public class Commoditycommodity {
                     break;
                 }
                 default:
-                    System.out.println("nhap tu 1 den 6");
+                    System.out.println("nhap tu 1 den 5");
             }
         }
 
