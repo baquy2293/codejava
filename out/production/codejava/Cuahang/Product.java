@@ -1,19 +1,18 @@
 package Store;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class product {
+public class Product {
     private String Name;
     private String Description;
     private double price;
     private int[] rate = new int[3];
     Scanner input = new Scanner(System.in);
 
-    public product() {
+    public Product() {
     }
 
-    public product(String name, String description, double price, int[] rate) {
+    public Product(String name, String description, double price, int[] rate) {
         Name = name;
         Description = description;
         this.price = price;
@@ -63,7 +62,7 @@ public double getrate()
 {
  return (rate[1]+rate[2]+rate[0])/3.0;
 }
-    public void inputInfor() {
+    public void inputInformation() {
         System.out.println("nhap ten");
         this.Name = input.nextLine();
         System.out.println("Description");
@@ -87,7 +86,7 @@ public double getrate()
                 '}';
     }
 
-    public void viewinfo() {
+    public void viewInFomation() {
         System.out.println(this.toString());
     }
 
