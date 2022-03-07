@@ -1,22 +1,22 @@
-pacStoreStore;
+package Store;
 
 import java.util.ArrayList;
 
 public class Shop {
-    ArrayList<product> danhsachsanpham = new ArrayList<>();
-    product newProduct = new product();
+    ArrayList<Product> listProduct = new ArrayList<>();
+    Product newProduct = new Product();
+
     public Shop() {
     }
 
     public void addProduct() {
-
-        newProduct.inputInfor();
-        danhsachsanpham.add(newProduct);
+        newProduct.inputInformation();
+        listProduct.add(newProduct);
     }
 
     public int findIndexbyName(String name) {
-        for (int i = 0; i < danhsachsanpham.size(); i++) {
-            if (danhsachsanpham.get(i).getName().equalsIgnoreCase(name)) {
+        for (int i = 0; i < listProduct.size(); i++) {
+            if (listProduct.get(i).getName().equalsIgnoreCase(name)) {
                 return i;
             }
         }
@@ -25,22 +25,22 @@ public class Shop {
 
     public void removeProduct(String name) {
         if (this.findIndexbyName(name) >= 0) {
-            this.danhsachsanpham.remove(name);
+            this.listProduct.remove(name);
         } else {
             System.out.println("khong tim thay ");
         }
     }
 
-    public void interProduc() {
-        for (product x : danhsachsanpham) {
-            x.viewinfo();
+    public void iterateProduct() {
+        for (Product x : listProduct) {
+            x.viewInFomation();
         }
     }
 
-    public void searchproduct(double minprice, double maxProduct) {
-        for (product x : danhsachsanpham) {
-            if (x.getPrice() <= maxProduct && x.getPrice() >= maxProduct) {
-                x.viewinfo();
+    public void searchProduct(double minprice, double maxPrice) {
+        for (Product x : listProduct) {
+            if (x.getPrice() <= maxPrice && x.getPrice() >= maxPrice) {
+                x.viewInFomation();
             }
         }
     }
